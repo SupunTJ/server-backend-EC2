@@ -2,9 +2,11 @@
 // getting-started.js
 const mongoose = require("mongoose");
 
+const uri = process.env.DB_URL;
+
 async function connectToDb() {
   try {
-    await mongoose.connect(process.env.DB_URL); // process.env is the way to load env
+    await mongoose.connect(uri); // process.env is the way to load env
     console.log("Connected to Database");
   } catch (error) {
     console.log(error);

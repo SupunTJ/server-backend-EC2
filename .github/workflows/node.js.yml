@@ -33,4 +33,7 @@ jobs:
         echo "${{ secrets.DB_URL }}" >> .env
         echo "${{ secrets.PORT }}" >> .env
         echo "${{ secrets.SECRET }}" >> .env
+    - run: pm2 restart api
+
+    
 

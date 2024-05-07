@@ -31,18 +31,18 @@ connectToDb();
 
 // Routing
 // User
-app.post("/signup", usersController.signup);
-app.post("/login", usersController.login);
-app.get("/logout", usersController.logout);
-app.get("/check-auth", requireAuth, usersController.checkAuth);
+app.post("api/signup", usersController.signup);
+app.post("api/login", usersController.login);
+app.get("api/logout", usersController.logout);
+app.get("api/check-auth", requireAuth, usersController.checkAuth);
 
 // Songs
-app.get('/search',requireAuth, songsController.searchSong);
-app.get("/songs", requireAuth, songsController.fetchSongs);
-app.get("/songs/:id", requireAuth, songsController.fetchSong);
-app.post("/songs", requireAuth, songsController.createSong);
-app.put("/songs/:id", requireAuth, songsController.updateSong);
-app.delete("/songs/:id", requireAuth, songsController.deleteSong);
+app.get('api/search',requireAuth, songsController.searchSong);
+app.get("api/songs", requireAuth, songsController.fetchSongs);
+app.get("api/songs/:id", requireAuth, songsController.fetchSong);
+app.post("api/songs", requireAuth, songsController.createSong);
+app.put("api/songs/:id", requireAuth, songsController.updateSong);
+app.delete("api/songs/:id", requireAuth, songsController.deleteSong);
 
 
 

@@ -30,7 +30,7 @@ jobs:
     - run: npm run build --if-present
     - run: |
         touch .env
-        echo "${{ secrets.DB_URL }}" > .env
-        echo "${{ secrets.PORT }}" > .env
-        echo "${{ secrets.SECRET }}" > .env
+        echo "${{ secrets.DB_URL }}" >> .env
+        echo "${{ secrets.PORT }}" >> .env
+        echo "${{ secrets.SECRET }}" >> .env
 
